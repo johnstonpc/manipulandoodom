@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="corpo">
+    <button type="button" onclick='document.querySelector("body").style.backgroundColor = "blue"'>Azul</button>
+    <button type="button" onclick='document.querySelector("body").style.backgroundColor = "orange"'>Laranja</button>
+    <img src="download.jpg" id="bola" alt="">
+    <button type="button" onclick="document.getElementById('bola').style.display='none'">sumir</button>
+    <button type="button" onclick="document.getElementById('bola').style.display='block'">mostrar</button>
+
+
+
+
+    <select name="teste" id="teste">
+        <option class="opt" value="exemplo1">exemplo1</option>
+        <option class="opt" value="exemplo2">exemplo2</option>
+        <option class="opt" value="exemplo3">exemplo3</option>
+        <option class="opt" value="exemplo4">exemplo4</option>
+    </select>
+    <button id="ddentro" onmouseover="dentro()" onmouseout="fora()">mudar de cor</button>
+</div>
+
+    <script>
+        let opt = document.querySelectorAll(".opt");
+        let teste = document.querySelector("#teste");
+        let body = document.body;
+
+        body.style.background = "black";
+
+        teste.onclick =() => {
+            if (opt[0].selected) {
+                body.style.background = "green";
+            }
+
+            else if (opt[1].selected) {
+                body.style.background = "red";
+            }
+
+            else if (opt[2].selected) {
+                body.style.background = "blue";
+            }
+
+            else if (opt[3].selected) {
+                body.style.background = "yellow";
+            }
+        }
+         function dentro() {
+            body.style.background = "grey";
+    
+        }
+        function fora() {
+            body.style.background = "rgb(11, 196, 156)";
+    
+        }
+
+    </script>
+    
+</body>
+</html>
